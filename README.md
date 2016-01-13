@@ -4,7 +4,7 @@
 
 Look up weather by Zip code. 
 
-Change the text in place instead of appending new paragraphs. **DONE&**
+Change the text in place instead of appending new paragraphs. **DONE**
 
 Add more weather information.
 
