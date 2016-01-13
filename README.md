@@ -2,9 +2,9 @@
 
 <h2>Things to do</h2>
 
-Look up weather by Zip code.
+Look up weather by Zip code. 
 
-Change the text in place instead of appending new paragraphs.
+Change the text in place instead of appending new paragraphs. **DONE&**
 
 Add more weather information.
 
