@@ -11,23 +11,32 @@
 
 
 $(function() {
-  var $apiKey = parseInt('34061ce86bfda355e56b98b6d018e56c'),
-  $inputCity = $('#inputCity'),
+  //API key
+  var $apiKey = '34061ce86bfda355e56b98b6d018e56c',
+  $inputCity = $('#inputCity'), //val of input used to url
+  //output when ajax call success
   $output = $('#output'),
+  //submit button
   $submitButton = $('#submit');
 
   $submitButton.click(function() {
     console.log('test');
     $.ajax({
       type: 'GET',
-      url: 'http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=2de143494c0b295cca9337e1e96b00e0',
+      //grab city info using API key
+      url: 'http://api.openweathermap.org/data/2.5/weather?q=' + $inputCity.val() +'&units=imperial&appid=' + $apiKey,
+      //on success print weather and temperature
       success: function(data) {
-        //var extractData = JSON.parse(data);
-        var temp = data.main.temp;
-        var tempStr = temp.toString();
+        console.log('success!');
+        //var temperature = data.main.temp;
+        // var kelvinTemp = data.main.temp;
+        // var kelvinToFarenheit = (kelvinTemp - 273.15)*1.8000 + 32;
         console.log(data);
-          $output.append('Weather: ' + data.weather[0].description + ', Temp: ' + parseInt(tempStr.slice(4,7)) + ' degrees');
-
+          $output.html('Weather: ' + data.weather[0].description + ', Temp: ' + data.main.temp + ' degrees');
+      },
+      //on error log error message
+      error: function() {
+        console.log('error loading data');
       }
     });
   });
