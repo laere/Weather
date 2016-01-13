@@ -13,3 +13,5 @@ Add metric units along with the imperial units.
 Tweet the weather, because everyone loves tweeting.
 
 Add longer forecasts and more weather info.
+
+Display data in table??
