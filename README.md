@@ -10,4 +10,6 @@ Add more weather information.
 
 Style the page better.
 
-**Add metric units along with the imperial units.
+Add metric units along with the imperial units.
+
+Tweet the weather, because everyone loves tweeting.
