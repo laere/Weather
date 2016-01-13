@@ -1,0 +1,29 @@
+//////////IMPORTS///////////////////
+@import 'bourbon/bourbon';
+@import 'base/base';
+@import '_normalize';
+
+
+
+html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 20px;
+}
+
+*,*:after, *:before {
+  box-sizing: border-box;
+}
+
+
+#add-order {
+  display: block;
+}
+
+input[type='text'] {
+  width: 200px;
+}
+
+h2 {
+  margin: 10px 0;
+}
