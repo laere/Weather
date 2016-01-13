@@ -23,8 +23,11 @@ $(function() {
       url: 'http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=2de143494c0b295cca9337e1e96b00e0',
       success: function(data) {
         //var extractData = JSON.parse(data);
+        var temp = data.main.temp;
+        var tempStr = temp.toString();
         console.log(data);
-          $output.append('<span> Weather: ' + data.weather[0].description + '</span>');
+          $output.append('Weather: ' + data.weather[0].description + ', Temp: ' + parseInt(tempStr.slice(4,7)) + ' degrees');
+
       }
     });
   });
