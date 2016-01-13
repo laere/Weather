@@ -5,10 +5,12 @@
 
 
 
+
+//////////BASE STYLES///////////////////
 html {
   box-sizing: border-box;
   padding: 0;
-  margin: 20px;
+  margin: 0;
 }
 
 *,*:after, *:before {
@@ -16,14 +18,51 @@ html {
 }
 
 
-#add-order {
-  display: block;
-}
-
 input[type='text'] {
-  width: 200px;
+  width: 400px;
 }
 
-h2 {
-  margin: 10px 0;
+
+//////////MAIN STYLES///////////////////
+.container {
+  background: url('https://images.unsplash.com/photo-1443890923422-7819ed4101c0?crop=entropy&fit=crop&fm=jpg&h=1000&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925') no-repeat center center fixed;
+  height: 102vh;
+  width: 100%;
+  margin-top: -22px;
+  position: relative;
+
+    > .weather-container {
+      //background-color: red;
+      text-align: center;
+      height: auto;
+      width: 600px;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      margin: auto -300px;
+      > #submit {
+        height: 40px;
+        width: 100%;
+        font-size: 1.5em;
+        padding: 10px 0;
+
+      }
+      > #inputCity {
+        height: 40px;
+        display: inline-block;
+        width: 100%;
+      }
+      > h1 {
+        font-size: 3em;
+        border: 1px solid white;
+        padding: 5px;
+        color: white;
+      }
+      > #output {
+        font-size: 2em;
+        font-weight: bold;
+        margin-top: 10px;
+        color: white;
+      }
+  }
 }
