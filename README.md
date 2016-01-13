@@ -9,3 +9,5 @@ Change the text in place instead of appending new paragraphs. **DONE**
 Add more weather information.
 
 Style the page better.
+
+**Add metric units along with the imperial units.
