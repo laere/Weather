@@ -6,10 +6,10 @@ Look up weather by Zip code.
 
 Change the text in place instead of appending new paragraphs. **DONE**
 
-Add more weather information.
-
 Style the page better.
 
 Add metric units along with the imperial units.
 
 Tweet the weather, because everyone loves tweeting.
+
+Add longer forecasts and more weather info.
