@@ -32,56 +32,65 @@ input[type='submit'] {
   height: 103vh;
   width: 100%;
   margin-top: -22px;
-    > .weather-container {
-      //background-color: red;
+  > .weather-container {
+    //background-color: red;
+    text-align: center;
+    height: auto;
+    width: 600px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin: auto -300px;
+    > #submit {
+      height: 50px;
+      font-size: 1.1em;
+      width: 100%;
+      border-bottom: 8px solid #31578d;
+      &:active {
+        animation: press 0.1s ease-out;
+        animation-fill-mode: forwards;
+      }
+    }
+    > #twitter {
+      width: 50px;
       text-align: center;
+      padding: 5px 0;
+      background-color: #4099ff;
+      border-radius: 30px;
+      color: white;
+      font-weight: bold;
+      font-size: 1.5em;
+      text-shadow: 1px 1px 2px #666;
+      box-shadow: 1px 1px 2px #666;
+      margin: 10px auto;
+      cursor: pointer;
+    }
+    > #inputCity {
+      height: 40px;
+      display: inline-block;
+      width: 100%;
+    }
+    > h1 {
+      font-size: 3em;
+      border: 1px solid white;
+      padding: 5px;
+      color: white;
+    }
+    > #output {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-top: 10px;
+      width: 100%;
       height: auto;
-      width: 600px;
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      margin: auto -300px;
-      > #submit {
-        height: 50px;
-        font-size: 1.1em;
-        width: 100%;
-        border-bottom: 8px solid #31578d;
-          &:active {
-            animation: press 0.1s ease-out;
-            animation-fill-mode: forwards;
-          }
+      color: white;
+    }
+    @keyframes press {
+      50% {
+        border-bottom: 6px solid #31578d;
       }
-      > .twitter {
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
+      100% {
+        border-bottom: 4px solid #31578d;
       }
-      > #inputCity {
-        height: 40px;
-        display: inline-block;
-        width: 100%;
-      }
-      > h1 {
-        font-size: 3em;
-        border: 1px solid white;
-        padding: 5px;
-        color: white;
-      }
-      > #output {
-        font-size: 1.5em;
-        font-weight: bold;
-        margin-top: 10px;
-        width: 100%;
-        height: auto;
-        color: white;
-      }
-      @keyframes press {
-        50% {
-          border-bottom: 6px solid #31578d;
-        }
-        100% {
-          border-bottom: 4px solid #31578d;
-        }
-      }
+    }
   }
 }
