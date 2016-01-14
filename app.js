@@ -15,7 +15,8 @@ $(function() {
       //output when ajax call success
       $output = $('#output'),
       //submit button
-      $submitButton = $('#submit');
+      $submitButton = $('#submit'),
+      $message;
 
   $input.keypress(function(event) {
     if (event.which === 13) {
@@ -27,6 +28,10 @@ $(function() {
     getWeatherData();
   });
 
+  function convertToCelsius(f) {
+    return (f - 32) / 1.8000;
+  }
+
   function getWeatherData() {
     $.ajax({
       type: 'GET',
@@ -34,11 +39,15 @@ $(function() {
       url: 'http://api.openweathermap.org/data/2.5/weather?q=' + $input.val() +'&units=imperial&appid=' + $apiKey,
       //on success print weather and temperature
       success: function(data) {
+        var celsius = convertToCelsius(data.main.temp);
         console.log('success!');
+        console.log(data);
         // var kelvinTemp = data.main.temp;
         // var kelvinToFarenheit = (kelvinTemp - 273.15)*1.8000 + 32;
-        console.log(data);
-          $output.html('Weather: ' + data.weather[0].description + ', Temp: ' + data.main.temp.toFixed(0) + ' degrees');
+          $message = 'Weather: ' + data.weather[0].description + '.';
+          $message += ' Temp: ' + data.main.temp.toFixed(0) + ' degrees Farenheit. ';
+          $message += celsius.toFixed(0) + ' degrees Celsius';
+          $output.html($message);
       },
       //on error log error message
       error: function() {
