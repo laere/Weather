@@ -8,36 +8,43 @@
 //parse returned data
 //2. when user 'clicks' search button the user receives weather info based on city, state entered.
 
-
-
 $(function() {
   //API key
   var $apiKey = '34061ce86bfda355e56b98b6d018e56c',
-  $inputCity = $('#inputCity'), //val of input used to url
-  //output when ajax call success
-  $output = $('#output'),
-  //submit button
-  $submitButton = $('#submit');
+      $input = $('#inputCity'), //val of input used to url
+      //output when ajax call success
+      $output = $('#output'),
+      //submit button
+      $submitButton = $('#submit');
+
+  $input.keypress(function(event) {
+    if (event.which === 13) {
+      getWeatherData();
+    }
+  });
 
   $submitButton.click(function() {
-    console.log('test');
+    getWeatherData();
+  });
+
+  function getWeatherData() {
     $.ajax({
       type: 'GET',
       //grab city info using API key
-      url: 'http://api.openweathermap.org/data/2.5/weather?q=' + $inputCity.val() +'&units=imperial&appid=' + $apiKey,
+      url: 'http://api.openweathermap.org/data/2.5/weather?q=' + $input.val() +'&units=imperial&appid=' + $apiKey,
       //on success print weather and temperature
       success: function(data) {
         console.log('success!');
-        //var temperature = data.main.temp;
         // var kelvinTemp = data.main.temp;
         // var kelvinToFarenheit = (kelvinTemp - 273.15)*1.8000 + 32;
         console.log(data);
-          $output.html('Weather: ' + data.weather[0].description + ', Temp: ' + data.main.temp + ' degrees');
+          $output.html('Weather: ' + data.weather[0].description + ', Temp: ' + data.main.temp.toFixed(0) + ' degrees');
       },
       //on error log error message
       error: function() {
         console.log('error loading data');
       }
     });
-  });
+  }
+
 });
