@@ -51,6 +51,11 @@ input[type='submit'] {
             animation-fill-mode: forwards;
           }
       }
+      > .twitter {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+      }
       > #inputCity {
         height: 40px;
         display: inline-block;
