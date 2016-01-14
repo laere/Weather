@@ -10,7 +10,7 @@ Add celsius **DONE**
 
 Display information better.
 
-Tweet the weather, because everyone loves tweeting.
+Tweet the weather, because everyone loves tweeting. **DONE**
 
 Add longer forecasts and more weather info.
 
