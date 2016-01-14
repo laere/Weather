@@ -545,8 +545,7 @@ input[type='text'] {
   background: url("https://images.unsplash.com/photo-1443890923422-7819ed4101c0?crop=entropy&fit=crop&fm=jpg&h=1000&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925") no-repeat center center fixed;
   height: 103vh;
   width: 100%;
-  margin-top: -22px;
-  position: relative; }
+  margin-top: -22px; }
   .container > .weather-container {
     text-align: center;
     height: auto;
@@ -560,8 +559,8 @@ input[type='text'] {
       font-size: 1.1em;
       width: 100%;
       border-bottom: 8px solid #31578d; }
-      .container > .weather-container > #submit:hover {
-        animation: press 0.2s ease-out;
+      .container > .weather-container > #submit:active {
+        animation: press 0.1s ease-out;
         animation-fill-mode: forwards; }
     .container > .weather-container > #inputCity {
       height: 40px;
@@ -576,6 +575,8 @@ input[type='text'] {
       font-size: 1.5em;
       font-weight: bold;
       margin-top: 10px;
+      width: 100%;
+      height: auto;
       color: white; }
 @keyframes press {
   50% {
