@@ -42,7 +42,7 @@ $(function() {
       success: function(data) {
         var celsius = convertToCelsius(data.main.temp),
             $message,
-            $twitter = $('.twitter');
+            $twitter = $('#twitter');
         console.log('success!');
         console.log(data);
         // var kelvinTemp = data.main.temp;
