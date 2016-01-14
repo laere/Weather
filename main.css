@@ -562,6 +562,10 @@ input[type='text'] {
       .container > .weather-container > #submit:active {
         animation: press 0.1s ease-out;
         animation-fill-mode: forwards; }
+    .container > .weather-container > .twitter {
+      width: 30px;
+      height: 30px;
+      cursor: pointer; }
     .container > .weather-container > #inputCity {
       height: 40px;
       display: inline-block;
