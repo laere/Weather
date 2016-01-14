@@ -2,8 +2,6 @@
 
 <h2>Things to do</h2>
 
-Look up weather by Zip code. 
-
 Change the text in place instead of appending new paragraphs. **DONE**
 
 Style the page better.
@@ -16,4 +14,4 @@ Add longer forecasts and more weather info.
 
 Display data in table??
 
-Submit input when you hit ENTER key. 
+Submit input when you hit ENTER key. **DONE**
