@@ -14,6 +14,4 @@ Tweet the weather, because everyone loves tweeting.
 
 Add longer forecasts and more weather info.
 
-Display data in table??
-
 Submit input when you hit ENTER key. **DONE**
