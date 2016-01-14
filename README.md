@@ -6,7 +6,9 @@ Change the text in place instead of appending new paragraphs. **DONE**
 
 Style the page better?
 
-Add metric units along with the imperial units.
+Add celsius **DONE**
+
+Display information better.
 
 Tweet the weather, because everyone loves tweeting.
 
