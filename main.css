@@ -562,9 +562,18 @@ input[type='text'] {
       .container > .weather-container > #submit:active {
         animation: press 0.1s ease-out;
         animation-fill-mode: forwards; }
-    .container > .weather-container > .twitter {
-      width: 30px;
-      height: 30px;
+    .container > .weather-container > #twitter {
+      width: 50px;
+      text-align: center;
+      padding: 5px 0;
+      background-color: #4099ff;
+      border-radius: 30px;
+      color: white;
+      font-weight: bold;
+      font-size: 1.5em;
+      text-shadow: 1px 1px 2px #666;
+      box-shadow: 1px 1px 2px #666;
+      margin: 10px auto;
       cursor: pointer; }
     .container > .weather-container > #inputCity {
       height: 40px;
