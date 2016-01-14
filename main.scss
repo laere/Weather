@@ -32,8 +32,6 @@ input[type='submit'] {
   height: 103vh;
   width: 100%;
   margin-top: -22px;
-  position: relative;
-
     > .weather-container {
       //background-color: red;
       text-align: center;
@@ -48,8 +46,8 @@ input[type='submit'] {
         font-size: 1.1em;
         width: 100%;
         border-bottom: 8px solid #31578d;
-          &:hover {
-            animation: press 0.2s ease-out;
+          &:active {
+            animation: press 0.1s ease-out;
             animation-fill-mode: forwards;
           }
       }
@@ -68,6 +66,8 @@ input[type='submit'] {
         font-size: 1.5em;
         font-weight: bold;
         margin-top: 10px;
+        width: 100%;
+        height: auto;
         color: white;
       }
       @keyframes press {
